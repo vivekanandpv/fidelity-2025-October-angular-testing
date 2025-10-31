@@ -1,0 +1,42 @@
+npm uninstall karma karma-chrome-launcher karma-coverage karma-jasmine karma-jasmine-html-reporter @types/jasmine jasmine-core
+
+--------------
+
+npm install vitest jsdom @types/jsdom --save-dev
+
+--------------
+
+In angular.json, replace the test block
+
+"test": {
+  "builder": "@angular/build:unit-test",
+  "options": {
+    "runner": "vitest",
+    "buildTarget": "your-project-name:build:development",
+    "tsConfig": "tsconfig.spec.json"
+  }
+}
+
+--------------
+
+In the tsconfig.spec.json, replace with this content
+
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/spec",
+    "types": [
+      "vitest/globals",
+      "jsdom"
+    ]
+  },
+  "include": [
+    "src/**/*.ts"
+  ]
+}
+
+--------------
+
+To run vitest
+
+ng t
