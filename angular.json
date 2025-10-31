@@ -26,9 +26,7 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.scss"
-            ]
+            "styles": ["src/styles.scss"]
           },
           "configurations": {
             "production": {
@@ -80,12 +78,13 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.scss"
-            ]
+            "styles": ["src/styles.scss"]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "a702f0e9-d1d4-42ef-9622-1a24acd5ba7d"
   }
 }
